@@ -109,7 +109,6 @@ jobs:
             mv $image $(echo $image | sed 's/K2P/K2P-NANO/')
           fi
           echo "TAG_ANME=$(date +%Y%m%d)" >> $GITHUB_ENV
-    - name : Upload packages
       uses: actions/upload-artifact@master
       if: always()
       with:
